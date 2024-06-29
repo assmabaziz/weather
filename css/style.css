@@ -1,0 +1,93 @@
+nav .logo img {
+  width: 64px;
+}
+nav .nav-links ul li {
+  border: 1px solid transparent;
+}
+nav .nav-links ul li:hover {
+border: 1px solid rgb(13, 202, 240);
+border-radius: 2rem;
+a {
+  color: rgb(13, 202, 240)!important;
+}
+}
+main.main {
+  background-image: url(../images/banner.png);
+  background-position: center;
+  background-size: cover;
+}
+form input:focus {
+  outline: none;
+}
+form input[type="button"] {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.weather-card.first-card .header,
+.weather-card.third-card .header  {
+  background-color: #2d303d;
+
+} 
+.weather-card.second-card .header {
+  background-color: #222531;
+}
+
+.weather-card.first-card .body, 
+.weather-card.third-card .body {
+  background-color: #323544;
+}
+.weather-card.second-card .body {
+  background-color: #262936;
+}
+.weather-card.first-card {
+  overflow: hidden;
+  border-radius: 10px 0 0 10px;
+}
+.weather-card.third-card{
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+}
+footer {
+  background-color: #2d303d;
+}
+footer span {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: 0.3s;
+  background-color: #080808;
+}
+footer span:hover {
+background-color:rgb(13, 202, 240);
+i {
+  color: #fff;
+}
+}
+footer span i {
+  color: rgb(13, 202, 240);
+  transition: 0.3s;
+}
+
+main.contact .heading{
+background-color: #262936;
+}
+main.contact .box {
+  height: 300px;
+  background-color: #262936;
+}
+main.contact form input,
+main.contact form textarea {
+  border: 1px solid rgb(90, 90, 90);
+  transition: 0.3s;
+}
+main.contact form input:hover,
+main.contact form textarea:hover {
+  border:3px solid rgb(13, 202, 240);
+}
+main.contact form input:focus,
+main.contact form textarea:focus {
+  border:3px solid rgb(13, 202, 240);
+  outline: none;
+}
+
