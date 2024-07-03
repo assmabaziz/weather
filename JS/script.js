@@ -1,12 +1,11 @@
 "use strict";
 const myKey = "636b1e2ded56442dac4132514242706";
 let searchValue = document.querySelector("#input");
+const baseUrl = "http://api.weatherapi.com/v1/forecast.json";
 let response = {};
 
 async function getData(city) {
-  let res = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=636b1e2ded56442dac4132514242706&q=${city}&days=3`
-  );
+  const res = await fetch(`${baseUrl}?key=${myKey}&q=${city}&days=3`); //meme le baseUrl peut etre enrigistree dans un const
   let finalRes = await res.json();
 
   response = finalRes;
@@ -129,15 +128,19 @@ function displayAfterTomorrow() {
 }
 async function callAllFunctions(city = "Algiers") {
   let x = await getData(city);
-  displayToday(x);
-  displayTomorrow(x);
-  displayAfterTomorrow(x);
+  await displayToday(x);
+  await displayTomorrow(x);
+  await displayAfterTomorrow(x);
+  clearValue()
   // console.log("walo");
 }
 callAllFunctions();
 searchValue.addEventListener("input", function () {
   callAllFunctions(searchValue.value);
 });
+function clearValue() {
+  searchValue.value = null;
+}
 /*
 function findLocation() {
   function success (position) {
@@ -178,6 +181,3 @@ navigator.geolocation.watchPosition((position) => {
 });
 // console.log(myPosition);
 */
-
-
-
